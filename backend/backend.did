@@ -1,0 +1,15 @@
+type Weapon = 
+ record {
+   description: text;
+   name: text;
+ };
+type BlogPost = 
+ record {
+   content: text;
+   imageUrl: text;
+   title: text;
+ };
+service : {
+  getBlogPosts: () -> (vec BlogPost) query;
+  getWeapons: () -> (vec Weapon) query;
+}
